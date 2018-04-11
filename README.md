@@ -9,3 +9,9 @@ Prerequisites:
     Example code assumes mongo db
 
 
+Usage:
+    in ledgerx dir:
+
+    python3 -m run.run_ledgerx
+
+    
