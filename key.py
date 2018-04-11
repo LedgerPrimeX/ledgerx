@@ -1,7 +1,7 @@
 import pymongo
 
 client = pymongo.MongoClient()
-db = client['connections']['keys']
+db = client['connections-test']['keys']
 
 def read_keys():
     res = {}

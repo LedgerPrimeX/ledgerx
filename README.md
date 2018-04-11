@@ -17,3 +17,10 @@ Prerequisites:
 ## API Documentation
 
 [docs.ledgerx.com](https://docs.ledgerx.com)
+
+Usage:
+    in ledgerx dir:
+
+    python3 -m run.run_ledgerx
+
+  

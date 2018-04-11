@@ -1,4 +1,4 @@
-import asyncio, aiohttp, async_timeout, logging, datetime as dt, collections, ujson, pymongo, time
+import asyncio, aiohttp, async_timeout, logging, datetime as dt, collections, ujson, motor.motor_asyncio as motor, time
 import key, param
 
 baseurl = key.keys['ledgerx-baseurl'] #''test.ledgerx.com/api'
@@ -13,7 +13,7 @@ class login(object):
         self.cid = key.keys['ledgerx-cid']
         self.token = key.keys['ledgerx-token']
         if db:
-            self.motor = pymongo.MongoClient()
+            self.motor = motor.AsyncIOMotorClient() #pymongo.MongoClient()
             self.db = self.motor[key.keys['ledgerx-market']]
         else:
             self.db = None
@@ -50,7 +50,7 @@ class login(object):
         if 'time' not in x: x['time'] = time.time()
         if self.db is not None:
             for i in w:
-                self.db[i].insert_one(x)
+                asyncio.ensure_future(self.db[i].insert_one(x))
 
     async def orders(self):
         url = 'https://' + baseurl + '/orders'
