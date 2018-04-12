@@ -19,6 +19,9 @@ Prerequisites:
 [docs.ledgerx.com](https://docs.ledgerx.com)
 
 Usage:
+
+    Trader doc: https://docs.google.com/document/d/1kZUz1OEkcuUt1eNL67eDr7qqFqAf3eZxiDt3QvTs30Q/edit#
+
     in ledgerx dir:
 
     python3 -m run.run_ledgerx

@@ -52,7 +52,7 @@ class option(object):
         option.labels[self.msg['label']] = self
         logging.info(self.msg['label'])
         self.day = 'BTC-Day' if self.exp.date() == option.accountdate else None
-        self.dayK = ('BTC-Day-' + ('Put' if self.type == 'put' else 'Call') + '-' + '${:0,.2f}'.format(int(self.K))) if self.exp.date() == option.accountdate else None
+        self.dayK = ('BTC-Day-' + ('Put' if self.type == 'put' else 'Call') + '-' + '${:0,.0f}'.format(int(self.K))) if self.exp.date() == option.accountdate else None
         if self.day is not None:
             logging.info('Day:' + self.day + ' ' + self.dayK)
         self.flag = 'p' if self.type == 'put' else 'c'
