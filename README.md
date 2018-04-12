@@ -8,6 +8,17 @@ Prerequisites:
 
     Example code assumes you run a MongoDB server
 
+    mongo>use ledgerx
+          db.createCollection("capped", { capped : true, size : 20000000} )
+
+    mongo>use connections-test
+          db.keys.insert_one({'ledgerx-token': 'xxxxxxxxxx'})
+          db.keys.insert_one({'mpid': your lx market participant id})
+          db.keys.insert_one({'cid': your client id})
+          db.keys.insert_one({'ledgerx-baseurl': 'test.ledgerx.com/api'})
+          db.keys.insert_one({'ledgerx-market': 'ledgerx-test'}) # db name for logging
+
+
 ## Installation
 
 `virtualvenv venv -p python3 && source venv/bin/activate`
