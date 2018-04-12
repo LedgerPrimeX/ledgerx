@@ -20,7 +20,7 @@ Prerequisites:
 
 Usage:
 
-    Trader doc: https://docs.google.com/document/d/1kZUz1OEkcuUt1eNL67eDr7qqFqAf3eZxiDt3QvTs30Q/edit#
+Trader doc: (https://docs.google.com/document/d/1kZUz1OEkcuUt1eNL67eDr7qqFqAf3eZxiDt3QvTs30Q/edit#)
 
     in ledgerx dir:
 
